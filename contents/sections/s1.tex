@@ -1,0 +1,42 @@
+\section{模板的基本使用}
+
+\subsection{LaTeX 发行版和编辑器安装}
+
+要用 \LaTeX{} 来完成建模论文，首先要确保正确安装一个 \LaTeX{} 的发行版本。
+
+\begin{itemize}
+    \item Mac 下可用 Mac\TeX{}
+    \item Linux 下可用 \TeX{}Live ；
+    \item windows 下可用 \TeX{}Live 或 Mik\TeX{} ;
+\end{itemize}
+
+具体安装可以参考 \href{https://github.com/OsbertWang/install-latex-guide-zh-cn/releases/}{Install-LaTeX-Guide-zh-cn} 或者其它靠谱的文章。另外可以安装一个易用的编辑器，例如 \href{https://mirrors.tuna.tsinghua.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/}{\TeX{}studio} 。
+
+使用该模板前，请阅读模板的使用说明文档。
+
+\subsection{文档类选项说明}
+
+根据要求，电子版论文提交时需去掉封面和编号页。可以加上 \verb|withoutpreface|  选项来实现，即：
+\begin{tcode}
+    \documentclass[withoutpreface]{cumcmthesis}
+\end{tcode}
+这样就能实现了。打印的时候有超链接的地方不需要彩色，可以加上 \verb|bwprint| 选项。
+
+在撰写论文的过程中可加上 \verb|draft| 选项以选择不嵌入图片来提高编译的速度，最终提交的电子版文档请去掉 \verb|draft| 选项以保证图片和代码被嵌入！若选择使用 \verb|draft| 选项请务必保证检查最终文档的图片和代码是否被嵌入，避免因图片和代码未被嵌入而影响参赛成绩。
+
+\subsection{目录说明}
+
+另外目录也是不需要的，将 \verb|\tableofcontents| 注释或删除，目录就不会出现了。
+
+\subsection{编译方式}
+
+编译记得用 \verb|xelatex|，而不是用 \verb|pdflatex|。在命令行编译的可以按如下方式编译：
+\begin{tcode}
+  xelatex main
+\end{tcode}
+或用 \verb|latexmk| 来编译，更推荐这种方式。
+\begin{tcode}
+  latexmk main
+\end{tcode}
+
+下面给出写作与排版上的一些建议。

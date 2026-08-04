@@ -1,0 +1,11 @@
+\section{蒙特卡洛算法--matlab 代码}
+
+\begin{lstlisting}[language=matlab]
+% 蒙特卡洛估算圆周率
+N = 1e6; % 随机点数量
+x = rand(N,1);
+y = rand(N,1);
+inside = (x.^2 + y.^2) <= 1;
+pi_est = 4 * sum(inside) / N;
+fprintf('估算的值: %.6f\n', pi_est);
+\end{lstlisting}

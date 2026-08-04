@@ -1,0 +1,61 @@
+% 包含承诺书与编号页, 纸质版打印使用(如果需要的话)
+%\documentclass{commons/cumcmthesis}
+
+% 编译时不嵌入图片和代码以提高编译速度, 最终的文档编译不应该包含draft选项!
+%\documentclass[draft]{commons/cumcmthesis}
+
+% 不含承诺书与编号页，电子版提交使用
+\documentclass[withoutpreface,bwprint]{commons/cumcmthesis} 
+
+% 导言区 -------
+% 用来加载宏包, 自定义命令等
+\input{commons/preamble.tex}
+
+% 论文基本信息
+\input{contents/info.tex}
+%-----
+
+\begin{document}
+% 封面
+\maketitle
+
+% 摘要
+\input{contents/abstract.tex}
+
+% 目录 -------
+% 2019 年明确无需目录
+%\tableofcontents
+%\newpage
+%-----
+
+% 正文 -------
+\input{contents/sections/s1.tex}
+
+\input{contents/sections/s2.tex}
+
+\input{contents/sections/s3.tex}
+
+\input{contents/sections/s4.tex}
+
+\input{contents/sections/s5.tex}
+
+\input{contents/sections/s6.tex}
+%-----
+
+% 参考文献
+\input{contents/references.tex}
+
+% 附录 -------
+\newpage
+\begin{appendices}
+\input{contents/appendix/a1.tex}
+
+\input{contents/appendix/a2.tex}
+
+\input{contents/appendix/a3.tex}
+\end{appendices}
+%-----
+
+\end{document} 
+
+% vim: set ft=tex fdm=marker fmr=\ -------,-----:
