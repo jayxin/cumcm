@@ -30,6 +30,7 @@
 ├── latexmkrc latexmk 配置文件
 ├── LICENSE.txt 使用许可
 ├── main.tex **主文档(编译入口文档, Main Document)**
+├── contributors.md 项目贡献者列表
 └── README.md 项目说明
 ```
 
