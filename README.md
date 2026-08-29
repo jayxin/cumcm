@@ -11,11 +11,13 @@
 .
 ├── commons/ 模板
 │   ├── cumcmthesis.cls 基础模板
+│   ├── cumcm2026.sty AI 使用声明的命令定义及格式调整
 │   └── preamble.tex 用户自定义加载宏包、命令、环境等
 ├── contents/ 内容
 │   ├── abstract.tex 摘要
 │   ├── appendix/ 附录
 │   ├── info.tex 论文基本信息
+│   ├── ai-usage.tex AI 使用声明
 │   ├── references.tex 参考文献
 │   └── sections/ 正文内容
 ├── docs/ 文档(包括论文格式说明文档等)
