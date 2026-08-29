@@ -394,6 +394,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 封面 -------
 \renewcommand{\maketitle}{%
   \par
+  \thispagestyle{plain}%
+  \setcounter{page}{1}%
 	\begingroup
     \newpage
     \global\@topnum\z@   % Prevents figures from going at top of page.
@@ -579,7 +581,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   \section*{\abstractname}%
 \else
   \begin{center}%
-    {\zihao{4}\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
+    {\zihao{3}\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
   \end{center}%
   \quotation
 \fi
@@ -684,7 +686,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\mcm@cap@figurename}{图}
 \newcommand*{\mcm@cap@tablename}{表}
 \newcommand*{\mcm@cap@appendixname}{附录}
-\newcommand*{\mcm@cap@abstractname}{摘要}
+\newcommand*{\mcm@cap@abstractname}{摘\quad 要}
 %-----
 
 % 中文关键字
